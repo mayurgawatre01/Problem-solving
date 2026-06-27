@@ -24,3 +24,4 @@
 ## 👨‍💻 Author
 Mayur Gawatre — AI/ML Engineering Student
 GitHub: https://github.com/mayurgawatre01
+# Day 1 complete
