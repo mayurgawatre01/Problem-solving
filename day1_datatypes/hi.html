@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login</title>
+    <style>
+        body { font-family: sans-serif; display: flex; justify-content: center; margin-top: 100px; }
+        .form { display: flex; flex-direction: column; gap: 10px; width: 300px; }
+        input { padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
+        button { padding: 8px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; }
+        .error { color: red; font-size: 13px; }
+        .success { color: green; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="form">
+        <h2>Login</h2>
+        <input type="text" id="email" placeholder="Enter email">
+        <span class="error" id="emailError"></span>
+        <input type="password" id="password" placeholder="Enter password">
+        <span class="error" id="passwordError"></span>
+        <button onclick="validate()">Login</button>
+        <span id="successMsg" class="success"></span>
+    </div>
+
+    <script>
+        function validate() {
+            // Reset errors
+            document.getElementById("emailError").innerText = ""
+            document.getElementById("passwordError").innerText = ""
+            document.getElementById("successMsg").innerText = ""
+
+            let email = document.getElementById("email").value
+            let password = document.getElementById("password").value
+            let isValid = true
+
+            // Email validation
+            let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+            if (email === "") {
+                document.getElementById("emailError").innerText = "Email required"
+                isValid = false
+            } else if (!emailRegex.test(email)) {
+                document.getElementById("emailError").innerText = "Invalid email format"
+                isValid = false
+            }
+
+            // Password validation
+            if (password === "") {
+                document.getElementById("passwordError").innerText = "Password required"
+                isValid = false
+            } else if (password.length < 6) {
+                document.getElementById("passwordError").innerText = "Min 6 characters required"
+                isValid = false
+            }
+
+            if (isValid) {
+                document.getElementById("successMsg").innerText = "Login successful ✅"
+            }
+        }
+    </script>
+</body>
+</html>
