@@ -1,4 +1,4 @@
-'''def two_sum(nums,target):
+def two_sum(nums,target):
     for i in range(len(nums)):
         for j in range(i+1,len(nums)):
             if nums[i]+nums[j]==target:
@@ -22,16 +22,6 @@ def better(arr,target):
             right-=1
         else:
             left+=1
-print(better([1,2,3,4,5,6,7],9))'''
+print(better([1,2,3,4,5,6,7],9))
 #hashing optimal solution 
 
-def opti_solu(nums,target):
-    seen={}
-    
-    for i,num in enumerate(nums):
-        need=target-num
-        if need  in seen:
-            return [seen[need],i]
-    seen[num]=i
-        
-print(opti_solu([1,2,3,5,6,7,8],9))
