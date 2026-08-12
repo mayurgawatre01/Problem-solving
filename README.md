@@ -5,6 +5,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0283-move-zeroes](https://github.com/mayurgawatre01/Problem-solving/tree/master/0283-move-zeroes) |
+| [0485-max-consecutive-ones](https://github.com/mayurgawatre01/Problem-solving/tree/master/0485-max-consecutive-ones) |
 ## Two Pointers
 |  |
 | ------- |
