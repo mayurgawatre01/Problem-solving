@@ -40,4 +40,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0007-reverse-integer](https://github.com/mayurgawatre01/Problem-solving/tree/master/0007-reverse-integer) |
+## Database
+|  |
+| ------- |
+| [0177-nth-highest-salary](https://github.com/mayurgawatre01/Problem-solving/tree/master/0177-nth-highest-salary) |
 <!---LeetCode Topics End-->
