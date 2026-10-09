@@ -1,16 +1,14 @@
 class Solution:
     def majorityElement(self, nums: list[int]) -> int:
-        candidate = None
-        count = 0
+        freq={}
+        n=len(nums)
 
         for num in nums:
-            if count == 0:
-                candidate = num
-
-            if num == candidate:
-                count += 1
+            if num in freq:
+                freq[num]+=1
             else:
-                count -= 1
-
-        return candidate
+                freq[num]=1
+        for num in nums:
+            if freq[num]>n//2:
+                return num
         
